@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #333;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 6px;
+  }
+  ::selection {
+    color: #ffffff;
+    background: #f15a29;
+  }
+
+  .custom-btn {
+    @apply text-base font-medium leading-6 text-white tracking-[1px] border border-solid border-transparent relative inline-flex align-middle w-auto rounded-none py-[18px] px-[35px] bg-transparent transition-[color] duration-[0.5s] ease-[cubic-bezier(.51,.86,.11,.93)] max-[1400px]:text-[15px] max-[1400px]:py-3.5 max-[1400px]:px-7;
+  }
+  .custom-btn span.btn-circle {
+    @apply inline-block w-[59px] h-full rounded-[50%] p-0 border border-solid border-white/40 bg-transparent absolute left-0 bottom-0 transition-all duration-[0.5s] ease-[cubic-bezier(.51,.86,.11,.93)] max-[1400px]:w-[52px];
+  }
+  .custom-btn span.btn-text {
+    @apply inline-block no-underline bg-[linear-gradient(to_top,transparent_0,transparent_calc(3px),currentColor_calc(3px),currentColor_100%)] bg-no-repeat transition-[background-size] duration-[0.5s] ease-[cubic-bezier(.51,.86,.11,.93)] z-[1];
+    background-position: 0 117%;
+    background-size: 100% calc(3px + 1px);
+  }
+  .custom-btn:hover {
+    @apply !bg-transparent !border-transparent;
+    color: var(--black-primary);
+  }
+  .custom-btn:hover span.btn-circle {
+    @apply !w-full rounded-[0%] bg-white;
+    border-color: var(--black-primary);
+  }
+  .custom-btn:hover span.btn-text {
+    background-size: 0 calc(3px + 1px);
+  }
+
+  nav.header-nav ul li:nth-child(4):before,
+  nav.header-nav ul li:nth-child(6):before {
+    @apply content-[''] w-[2px] h-4 block ml-5 mr-11 bg-[var(--orange)] max-[1650px]:ml-2 max-[1650px]:mr-8 max-[1500px]:ml-1 max-[1500px]:mr-7 max-[1024px]:hidden;
+  }
+  .header-nav-social ul li:first-child a {
+    @apply pl-0;
+  }
+  .header-nav-inner.active {
+    @apply translate-y-0;
+  }
+  header.header-main-sec.active {
+    @apply max-[1024px]:fixed max-[1024px]:max-w-[100vw];
+  }
+
+  .banner-scroll-down-text p .char {
+    @apply tracking-[1px] inline-block absolute top-1/2 left-1/2 [transform:translate(-50%,_-50%)_rotate(calc(var(--inner-angle)_*_var(--char-index)))_translateY(var(--radius))];
+  }
+
+  .tt-portfolio-carousel-item figure.tt-pci-image-wrap * {
+    @apply transition-all duration-[1s] ease-[cubic-bezier(0.07,0.72,0.29,0.96)];
+  }
+  .tt-portfolio-carousel-item:hover figure.tt-pci-image-wrap * {
+    @apply scale-[1.05];
+  }
+
+  .digital-partners-main-content-area
+    .cust-col-3:nth-child(4n)
+    .digital-partners-item {
+    @apply min-[992px]:border-r-0;
+  }
+  .digital-partners-main-content-area
+    .cust-col-3:nth-last-child(-n + 4)
+    .digital-partners-item {
+    @apply min-[992px]:border-b-0;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .digital-partners-main-content-area
+      .cust-col-3:nth-child(3n)
+      .digital-partners-item {
+      @apply border-r-0;
+    }
+    .digital-partners-main-content-area
+      .cust-col-3:nth-last-child(-n + 2)
+      .digital-partners-item {
+      @apply border-b-0;
+    }
+  }
+
+  .digital-partners-main-content-area
+    .cust-col-3:nth-child(2n)
+    .digital-partners-item {
+    @apply max-[767px]:border-r-0;
+  }
+  .digital-partners-main-content-area
+    .cust-col-3:nth-last-child(-n + 2)
+    .digital-partners-item {
+    @apply max-[767px]:border-b-0;
+  }
+
+  @keyframes bounce-down {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .text-stroke {
+    -webkit-text-stroke-width: 1px;
+  }
+  .text-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+  .text-stroke-white {
+    -webkit-text-stroke-color: #fff;
+  }
+  .text-stroke-orangecx {
+    -webkit-text-stroke-color: #f15a29;
+  }
+
+  .home-about-btn-area .home-about-btn-arrow svg line,
+  .home-about-btn-area .home-about-btn-arrow svg path {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+  .home-about-btn-area .home-about-btn-arrow svg line:not(:first-child),
+  .home-about-btn-area .home-about-btn-arrow svg path:not(:first-child) {
+    stroke-linecap: square;
+  }
+  .home-about-btn-area .home-about-btn-arrow svg line:nth-child(1),
+  .home-about-btn-area .home-about-btn-arrow svg path:nth-child(1) {
+    stroke-dasharray: 62px;
+    stroke-dashoffset: 124px;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.61, 1, 0.88, 1);
+  }
+  .home-about-btn-area .home-about-btn-arrow svg line:nth-child(2),
+  .home-about-btn-area .home-about-btn-arrow svg path:nth-child(2) {
+    stroke-dasharray: 22px;
+    stroke-dashoffset: 44px;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.61, 1, 0.88, 1) 0.3s;
+  }
+  .home-about-btn-area .home-about-btn-arrow svg line:nth-child(3),
+  .home-about-btn-area .home-about-btn-arrow svg path:nth-child(3) {
+    stroke-dasharray: 22px;
+    stroke-dashoffset: 44px;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.61, 1, 0.88, 1) 0.3s;
+  }
+  .home-about-btn-area:hover .home-about-btn-arrow svg line,
+  .home-about-btn-area:hover .home-about-btn-arrow svg path {
+    stroke-dashoffset: 0;
+  }
+
+  /* .testimonial-slider .swiper-slide.swiper-slide-active .testi-slide-item, 
+    .testimonial-slider .swiper-slide.swiper-slide-next .testi-slide-item, 
+    .testimonial-slider .swiper-slide.swiper-slide-next + .swiper-slide .testi-slide-item {
+        @apply scale-100;
+    } */
+
+  .testimonial-slider .swiper-slide {
+    @apply !opacity-0;
+  }
+  .testimonial-slider .swiper-slide.swiper-slide-next + .swiper-slide {
+    @apply !opacity-50;
+  }
+  .testimonial-slider .swiper-slide.swiper-slide-active,
+  .testimonial-slider .swiper-slide.swiper-slide-next {
+    @apply !opacity-100;
+  }
+
+  .home-blog-post-inner:hover .home-blog-post-btn {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .imgcodx canvas {
+    @apply absolute z-[2] inset-0 !w-full !h-full;
+  }
+  .lil-gui {
+    @apply fixed z-[-999] left-[-100vw] !hidden;
+  }
+}
