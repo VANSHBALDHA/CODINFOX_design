@@ -14,7 +14,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div class="page-banner-modal-block page-banner-modal-circle max-w-[380px] w-full h-[380px] absolute top-0 right-[170px] z-0 opacity-100">
+          <div class="page-banner-modal-block  page-banner-modal-circle max-w-[380px] w-full h-[380px] absolute top-0 right-[170px] z-0 opacity-100">
             <div
               class="codin__3dblock w-full h-full"
               data-item3d="images/3D/circle.gltf"
