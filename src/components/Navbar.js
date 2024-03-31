@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/Images/logo/Logo-Mark-White.svg";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 const Navbar = () => {
   return (
@@ -11,10 +12,7 @@ const Navbar = () => {
             <div class="cust-row items-center">
               <div class="header-logo-col max-w-[100px] max-[1024px]:relative max-[1024px]:z-[1] max-[767px]:max-w-[84px]">
                 <div class="header-logo-area flex w-full h-auto">
-                  <Link
-                    to="/"
-                    class="header-logo-link flex w-full h-auto"
-                  >
+                  <Link to="/" class="header-logo-link flex w-full h-auto">
                     <img
                       src={logo}
                       alt=""

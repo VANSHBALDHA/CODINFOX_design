@@ -4,7 +4,7 @@ import  logo from "../assets/Images/logo/Primary-Logo-White.svg"
 const Footer = () => {
   return (
     <>
-      <footer class="footer-main-sec relative pt-28 pb-12">
+      {/* <footer class="footer-main-sec relative pt-28 pb-12">
         <div class="footer-cta-area pb-20 mb-20 border-b border-solid border-orangecx/20">
           <div class="cust-container-fluid">
             <div class="marquee-main marquee-left overflow-hidden">
@@ -328,7 +328,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 };
